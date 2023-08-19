@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.authbtn{
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.authbtn:hover{
+  overflow: hidden;
+  background-color:rgba(133, 133, 133, 0.285);
+}
+
+.cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.325);
+  border-radius:5px;
+  gap: 5px;
+}
+
+/* loader */
+
+.loader {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  position: relative;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #ff3c00, #0ce75c, #1e0bc4);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: spin 2s linear infinite, scale 1.2s ease-in-out infinite alternate;
+}
+
+.loader::after {
+  animation-delay: -1s;
+}
+
+@keyframes spin {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+
